@@ -1,6 +1,6 @@
 package problem.six;
 
-public class Convert {
+class Convert {
 
 	private static String[] units = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
 			"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
@@ -17,14 +17,9 @@ public class Convert {
 		}
 
 		else if (n < 1000) {
-			return units[n / 100] + " hundred and" + ((n % 100 != 0) ? " " : "") + convertNumber(n % 100);
+			return units[n / 100] + " hundred" + ((n % 100 != 0) ? " and " : "") + convertNumber(n % 100);
 		}
 
 		return convertNumber(n / 1000) + " thousand" + ((n % 10000 != 0) ? " " : "") + convertNumber(n % 1000);
-	}
-
-	public static void main(final String[] args) {
-		int n = 135;
-		System.out.println(convertNumber(n));
 	}
 }

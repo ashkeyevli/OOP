@@ -15,8 +15,8 @@ class Time {
 	
 	public void add(Time time) {
 		hour = (time.hour + hour) % 24;
-		minute = (time.minute + minute) % 24;
-		second = (time.second + second) % 24;
+		minute = (time.minute + minute) % 60;
+		second = (time.second + second) % 60;
 	}
 	
 	public String toUniversal() {
