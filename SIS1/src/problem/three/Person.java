@@ -1,7 +1,7 @@
 package problem.three;
 
 class Person {
-	public enum Gender {B, G};
+	enum Gender {B, G};
 	
 	private Gender gender;
 	
